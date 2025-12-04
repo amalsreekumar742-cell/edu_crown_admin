@@ -224,7 +224,15 @@ class _SideNavigationBarState extends State<SideNavigationBar> {
             ),
           ),
           Expanded(
-            child: PageStorage(bucket: _bucket, child: widget.child),
+            child: Column(
+              children: [
+                Container(
+                  height: 50,
+                  color: Colors.white,
+                ),
+                     Expanded(child: PageStorage(bucket: _bucket, child: widget.child)),
+              ],
+            ),
           ),
         ],
       ),
